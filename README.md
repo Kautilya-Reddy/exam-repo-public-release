@@ -1,7 +1,7 @@
 ## Local setup:
 
 ```bash
-git clone https://github.com/Jivraj-18/exam-repo-public-release.git
+git clone git@github.com:Jivraj-18/exam-repo-public-release.git
 cd exam-repo-public-release
 git submodule update --init --recursive
 npm install
@@ -107,4 +107,20 @@ export default {
   `,
 };
 ```
+
+
+
+## This is for evals
+
+### Steps we need to execute 
+
+#### clone and create prs.json
+gh repo clone Jivraj-18/exam-repo-public-release
+cd exam-repo-public-release
+gh pr list --limit 500 --json number,headRefName > prs.json
+
+#### extract student submissions 
+touch collect_submissions.sh
+chmod +x collect_submissions.sh
+
 
